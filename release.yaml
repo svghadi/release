@@ -1,0 +1,6 @@
+release:
+  version: "1.17.0"
+  tag: "v1.17.0-1"
+  snapshot_id: ""
+  manager:
+    github: "svghadi"
