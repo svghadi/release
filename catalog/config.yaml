@@ -1,0 +1,20 @@
+---
+name: openshift-gitops-operator
+repository: openshift-gitops-1/gitops-operator-bundle
+konflux:
+  namespace: openshift-gitops
+  prefix: openshift-gitops-fbc
+  github: rh-gitops-midstream/openshift-gitops-fbc
+upgrade:
+  between_major: skipRange
+ocp:
+  - v4.13
+  - v4.14
+  - v4.15
+  - v4.16
+  - v4.17
+replacements:
+  - from: quay.io/redhat-user-workloads/rh-openshift-gitops-tenant/gitops-operator-bundle-master
+    to: registry.redhat.io/openshift-gitops-1/gitops-operator-bundle
+bundles:
+  - sha256:4d9bc1a4412aa43f2ed34c7064634d4f02fd7af9c828ec7c6b668525d7cfc8b6
