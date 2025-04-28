@@ -179,7 +179,7 @@ metadata:
       ]
     capabilities: Deep Insights
     console.openshift.io/plugins: '["gitops-plugin"]'
-    containerImage: quay.io/redhat-developer/gitops-operator
+    containerImage: registry.redhat.io/openshift-gitops-1/gitops-rhel8-operator@sha256:b3b8e2e8a4ed592a029ac30fa39419744a7ff95e8d9e94e13c04219e755af553
     createdAt: "2025-03-07T13:13:07Z"
     description: Enables teams to adopt GitOps principles for managing cluster configurations
       and application delivery across hybrid multi-cluster Kubernetes environments.
@@ -1015,7 +1015,7 @@ spec:
                 - name: LABEL_SELECTOR
                 - name: ENABLE_CONVERSION_WEBHOOK
                   value: "true"
-                image: quay.io/redhat-developer/gitops-operator:latest
+                image: registry.redhat.io/openshift-gitops-1/gitops-rhel8-operator@sha256:b3b8e2e8a4ed592a029ac30fa39419744a7ff95e8d9e94e13c04219e755af553
                 livenessProbe:
                   httpGet:
                     path: /healthz
@@ -1049,7 +1049,7 @@ spec:
                 - --logtostderr=true
                 - --allow-paths=/metrics
                 - --http2-disable
-                image: registry.redhat.io/openshift4/ose-kube-rbac-proxy:v4.13
+                image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:baa41441752d6d739065eda587b92402e209c67fbcdacf0a40559d37c9e978eb
                 name: kube-rbac-proxy
                 ports:
                 - containerPort: 8443
